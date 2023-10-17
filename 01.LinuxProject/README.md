@@ -115,3 +115,15 @@ the tail command displays the last 10 lines of a file
 
 ![](img/18.tail.png)
 
+## chmod command
+
+this command modifies file or directory permision
+
+![](img/21.chmod.png)
+
+## chown command
+
+It allow you change the owership of a file, directory or symbolish kink to a user
+
+`chown linuxuser2 filename.txt
+`
