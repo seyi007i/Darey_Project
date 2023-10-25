@@ -7,6 +7,9 @@ The setup of the linux os was done on AWS. The OS is  `ubuntu`. Connection to th
 
 ![](img/ubuntu%20instance%20on%20aws.png)
 
+I login to the ubuntu instance on aws using `terminus`
+
+![](img/02.Ubuntu%20cmd.png)
 ## Installing Apache and updating firewall
 
 Apache HTTP server is the most widely used web server software. It runs on 67% of all webservers in the world
@@ -97,4 +100,66 @@ Once installation is finished, you can run the following command to confirm your
 ![](img/13.phpversion.png)
 
 #### Enabling PHP on the website
+With the default directory index settings on apache, a file named index.html will always take precedence over an index.php file. To change this behaviour do the following:
+`sudo vim /etc/apache2/mods-enabled/dir.conf
 
+paste the below code
+`<IfModule mod_dir.c>
+        #Change this:
+        #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+        #To this:
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+</IfModule>`
+
+![](img/14.indexphp.png)
+
+reload php
+![](img/15.reloadapache.png)
+
+Create a new file named index.php inside your custom web root folder
+`$ vim /var/www/projectlamp/index.php
+`
+
+paste `<?php
+phpinfo();
+`
+![](img/17.indexPhpCode.png)
+
+### How to create a virtual host for website using apache
+
+Create the folder for the project using `mkdir`
+
+`$ sudo mkdir /var/www/projectlamp
+`
+Assign ownership of the folder to $USER environment variable
+
+`$ sudo chown -R $USER:$USER /var/www/projectlamp
+`
+![](img/18.changeIndexOwnership.png)
+
+Create and open a new configuration file in Apache's `sites-available`
+
+`$ sudo vi /etc/apache2/sites-available/projectlamp.conf
+` 
+![](img/19.projectlampConf.png)
+
+To enable the new virtual host
+
+`$ sudo a2ensite projectlamp
+`
+
+To disable the default apache's default
+
+`$ sudo a2dissite 000-default
+`
+To make sure your configuration file dosen't contain syntax eror, run:
+`$ sudo apache2ctl configtest
+`
+
+Finally, reload Apache so that the changes take effect
+`$ sudo systemctl reload apache2
+`
+
+![](img/20.otherConfig.png)
+
+![](img/21.phpindextestpage.png)
