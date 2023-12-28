@@ -2,7 +2,7 @@
 
 ### This script prints system info ###
 
-echo "Welcome to GitHub webhook bash script."
+echo "Welcome to GitHub webhook bash script test."
 echo
 
 #checking system uptime
