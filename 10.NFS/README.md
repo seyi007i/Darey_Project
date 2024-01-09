@@ -113,3 +113,35 @@ webserver1 and 2 have /var/www/ pulling from the same nfs server
 
 ![](img/23.testA.png)
 ![](img/23.testB.png)
+
+![](img/24.github.png)
+
+Fork the tooling source code from darey.io github account
+![](img/26.cloneGit.png)
+
+![](img/24.github.png)
+
+Open tcp port 80 on the web server
+
+check security permission
+
+![](img/25.selinux.png)
+
+Update the db with `tooling-db.sql` script
+
+![](img/27.sqlInsert.png)
+
+Update the `functions.php` to connect to the db
+
+![](img/28.dbconnect.png)
+
+Insert a new username to login
+
+![](img/30.adminaccount.png)
+
+Open the `<webserver-url>/index.php, and login with the username: admin , password: admin
+
+![](img/29.final.png)
+
+
+
