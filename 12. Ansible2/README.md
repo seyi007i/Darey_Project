@@ -57,7 +57,7 @@ Unistall the wireshark installed in the previous project
 
 ![](img/07.dev_yml%20a.png)
 
-![](img/08.playbook.png)
+
 
 ![](img/09.uninstall-wireshark.png)
 
@@ -87,6 +87,6 @@ run the playbook
 cd /home/ubuntu/ansible-config-artifact
 
 ansible-playbook -i /inventory/uat.yml playbooks/site.yaml
-
+![](img/08.playbook.png)
 
 ![](img/final.png)
