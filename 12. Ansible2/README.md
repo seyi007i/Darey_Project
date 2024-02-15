@@ -87,6 +87,6 @@ run the playbook
 cd /home/ubuntu/ansible-config-artifact
 
 ansible-playbook -i /inventory/uat.yml playbooks/site.yaml
-
+![](img/13%20playbook.png)
 
 ![](img/final.png)
