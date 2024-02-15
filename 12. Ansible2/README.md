@@ -57,7 +57,7 @@ Unistall the wireshark installed in the previous project
 
 ![](img/07.dev_yml%20a.png)
 
-![](img/08.playbook.png)
+
 
 ![](img/09.uninstall-wireshark.png)
 
@@ -73,9 +73,7 @@ create roles using ansible-galaxy or manually
 ![](img/12a.role.png)
 
 Update playbook content
-
-
-![](img/13%20playbook.png)
+![](img/08.playbook.png)
 
 ![](img/task_main.png)
 
@@ -87,6 +85,12 @@ run the playbook
 cd /home/ubuntu/ansible-config-artifact
 
 ansible-playbook -i /inventory/uat.yml playbooks/site.yaml
+<<<<<<< HEAD
 ![](img/13%20playbook.png)
 
 ![](img/final.png)
+=======
+
+![](img/13%20playbook.png)
+![](img/final.png)
+>>>>>>> 1b3dfa3fa027eb8288d299ba14391aab10477bfc
