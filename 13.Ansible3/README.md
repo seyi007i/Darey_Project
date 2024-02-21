@@ -58,3 +58,11 @@ create loadbalancers.yml
 Configure the site.yml to reference the loadbalancer
 
 ![](img/site.png)
+
+run the playbook
+
+![](img/run%20play.png)
+
+![](img/play%20lb.png)
+
+![](img/play2.png)
