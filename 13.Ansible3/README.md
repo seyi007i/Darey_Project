@@ -66,3 +66,9 @@ run the playbook
 ![](img/play%20lb.png)
 
 ![](img/play2.png)
+
+![](img/228.png)
+
+![](img/36.png)
+
+![](img/6.png)
