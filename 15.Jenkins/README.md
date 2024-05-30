@@ -50,3 +50,32 @@ input the jenkins server public ip with the port number on a browser
 10. log in to jenkins console
 
 ![](img/10.landingPage.png)
+
+
+## 2. Source code Management Repository Integration
+
+- configure webhook with jenkins public IP
+
+This process create a continueous integration `Ci`
+
+![](img/7.webhook.png)
+
+![](img/7.webhook2.png)
+
+packet delivery can also be verified
+
+![](img/7.webhook_jenkins%20log.png)
+
+## jenkins pipeline for web application
+
+![](img/web%20pipe.png)
+
+![](img/web_jenkinsfile.png)
+
+
+![](img/9.pipe_website.png)
+
+![](img/9b%20script%20log.png)
+
+
+
