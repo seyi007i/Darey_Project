@@ -52,7 +52,6 @@ input the jenkins server public ip with the port number on a browser
 10. log in to jenkins console
 
 ![](img/10.landingPage.png)
-<<<<<<< HEAD
 
 
 ## 2. Source code Management Repository Integration
@@ -71,20 +70,54 @@ packet delivery can also be verified
 
 
 ## 3 Unit test with webhook
+Continueous integration is when a code is push from the IDE, the push triggers the Jenkins to an action
 
+1. create a free style project
 
-## jenkins pipeline for web application
+2. set the repo url
 
-![](img/web%20pipe.png)
+3. check `GitHub hook trigger for GITScm polling` under the build trigger
+
+![](img/jenkin%20freestyle.png)
+
+4. Do a push from the IDE, it will trigger a build. find below the build log 
+
+![](img/webhook%20jenkin%20freestyle.png)
+
+## 3. jenkins pipeline for web application
+
+1. Create a Jenkinsfile for the build
 
 ![](img/web_jenkinsfile.png)
 
+2. create a `pipeline` project in jenkins
+![](img/web%20pipe.png)
+
+3. Automate the build process using webhook
 
 ![](img/9.pipe_website.png)
+
+4. build log
 
 ![](img/9b%20script%20log.png)
 
 
+## 5. Docker image creation and registry push
 
-=======
->>>>>>> 30c063b397c1c559f7b9d02976b6d2eeb70ab56a
+1. Setup a docker Ec2 instance. this can also be done on the Jenkins server
+
+![](img/istall%20docker%20script.png)
+
+2. Create a dockerfile to create the image
+
+![](img/Dockerfile.png)
+
+3. create and run jenkins scripts pipeline
+
+![](img/push%20to%20hub.png)
+
+4. push to the hub registry
+
+![](img/hub-repo.png)
+
+
